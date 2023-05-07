@@ -12,7 +12,10 @@ body{
 h1, h2, h3{
     margin: 0;
     padding: 0;
-    color: #404040;
+    text-align: center;
+    font-size: 128px;
+    transform: translate(0%, 200%);
+    color: #000;
 }
      
 p, ol, ul{
@@ -137,3 +140,4 @@ img {
     max-height: 100%;*/
     filter: brightness(70%);
 }
+
