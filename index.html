@@ -1,40 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>rsrulloda - Home</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <style>
-            body {
-                background-image: url('img/goldengatebridge.png');
-                background-size: cover;
-            }
-        </style>
-        <script src="js/script.js"></script>
-    </head>
-    <body>
-        <header>
-            <div id="top-header">
-            <!-- Logo -->
-            <div id="logo"> 
-                <a href="index.html">
-                <img src="img/signature.png" />
-                </a>
-            </div>   
-         
-            <!-- Navigation Menu -->
-            <nav>
-              <div id="menu">
-                <ul>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html" onclick="showAlert()">Contact</a></li>
-                </ul>
-              </div>
-            </nav>
-        </div> 
-        </header>
-        
-        <h1>Ronell Sean Rulloda</h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ronell Sean Rulloda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/189cda3ad4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-------------------------header------------------------->
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="img/signature.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Computer Science Student</p>
+            <h1>Hi, I'm <span>Ron</span></h1>
+        </div>
+    </div>
+</div>
+<!-------------------------about------------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="img/pfp.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I am currently a computer science study at California State University, East Bay
+                    expected to graduate this fall 2023. I am most proficient in Java and C++, but I 
+                    also have experience with various other languages and tools. I am currently looking
+                    for employment and do not need a work visa in the United States. </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br>
+                            <li>Proficient: Java, C++
+                            <br> Familiar: Kotlin, Python, SQL, MySQL, HTML/CSS, JavaScript, Swift, C#</li>
+                        </li>
+                        <li><span>Software</span><br>IntelliJ, Eclipse, Android Studio, Visual Studio, XCode, Unity, Discord, Zoom</li>
+                        <li><span>Operating Systems</span><br>Windows, MacOS, Linux</li>
+                        <li><span>Tools</span><br>Git, Gradle, Figma</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Oakley</span><br>Sales Associate, Livermore CA <br> Nov 2018 - 2021</li>
+                        <li><span>Under Armour</span><br>Footwear Lead, Livermore CA <br> Jul 2018 - Nov 2018</li>
+                        <li><span>Under Armour</span><br>Sales Associate, Livermore CA <br> Jun 2017 - Jul 2018</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>California State University, East Bay</span><br>Computer Science <br> Graduating Fall 2023</li>
+                        <li><span>City College of San Francisco</span><br>Computer Science <br> Aug 2017 - May 2021</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="hobbies">
+                    <ul>
+                        <li><span>Sports</span><br>Basketball, Soccer, Formula 1, Sumo</li>
+                        <li><span>Games</span><br>Rocket League, Kerbal Space Program, League of Legends</li>
+                        <li><span>Culture</span><br>Anime, Manga, Food, Languages, Travel</li>
+                        <li><span>Other</span><br>Chess, K-pop</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------services------------------------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Software Development</h2>
+                <p>I can create, design, and maintain software applications for different platforms
+                    and purposes.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-laptop-code"></i>
+                <h2>Web Development</h2>
+                <p>I can build websites and web applications, ranging from simple static sites to 
+                    complex web-based systems.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Mobile App Development</h2>
+                <p>I can develop mobile applications for Android, iOS, or cross-platform development
+                    using Kotlin or Swift.</p>
+                <a href="#portfolio">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------portfolio------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="img/work-1.png">
+                <div class="layer">
+                    <h3>Jisho Discord Bot</h3>
+                    <p>Jisho is a Japanese word bot that provides a word of the day from a SQLite database. The word is 
+                        displayed in English and Japanese characters, along with a definition and a part of speech. I plan
+                        on implementing more features in the future such as translation and a study mode. This bot is made
+                        using Java, Gradle, and SQLite.</p>
+                    <a href="https://github.com/rsrulloda/Jisho"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/work-2.png">
+                <div class="layer">
+                    <h3>PlateUp! Pretzel Mod</h3>
+                    <p>PlateUp! is a food service simulation game on Steam. There are a variety of base 
+                        recipes that are included such as hamburgers, steak, and salad. This mod will implement
+                        additional pretzel recipes, such as almond pretzels, cinnamon nuggets, and lemonade. This 
+                        mod is to be created using C# and .NET framework.</p>
+                    <a href="https://github.com/rsrulloda/PretzelsMod"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="img/work-3.png">
+                <div class="layer">
+                    <h3>FoodWise Mobile App</h3>
+                    <p>FoodWise is an android app concept developed as a group for the 2023 Google Solution
+                        Challenge to help reduce food waste.The idea of the app scans a receipt and keeps 
+                        track of the expiration date of the foods purchased. If the food is close to its 
+                        expiration date, then the app will notify you. The app also gives you an insight to
+                        your food wasting habits. The demo version of the app was developed using Kotlin and Gradle. </p>
+                    <a href="https://github.com/rsrulloda/FoodWise"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-------------------------contact------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>ronell.rulloda@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>7739861998</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/rsrulloda/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/rsrulloda"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="img/Ronell Sean Rulloda Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Ronell Sean Rulloda</p>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname) {
+        for(tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+
+        for(tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbw_Zu_LUsceJLpw8J7FDVHy6NxRjwUQ5kXi3d3KfbukH6H5NcGwDqJDH9SQbLCvqpx_/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+<script>
+    var header = document.getElementById('header');
+    var overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    header.appendChild(overlay);
+
+    window.addEventListener('scroll', function() {
+    var scrollPosition = window.scrollY;
+    var headerHeight = header.offsetHeight;
+
+    // Adjust the opacity calculation with a larger number (e.g., 2) for faster darkening
+    var opacity = Math.min(1, scrollPosition / (headerHeight / 1.1));
+
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, ' + opacity + ')';
+    });
+</script>
+
+</body>
 </html>
